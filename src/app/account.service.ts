@@ -40,6 +40,7 @@ export class AccountService {
     localStorage.removeItem('authToken')
     this.isSignedInSubject.next(false)
 
-    this.router.navigate(['/login'])
+    // NOTE: not using router here so that page is reloaded, clearing state
+    location.href = '/login'
   }
 }
