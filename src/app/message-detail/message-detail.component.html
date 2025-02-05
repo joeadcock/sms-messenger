@@ -1,6 +1,7 @@
 <div class="message-detail">
   <div class="flex flex-row justify-between">
     <div class="phone font-bold">{{ message.phone }}</div>
+    <span class="status font-light italic">{{ message.status }}</span>
     <div>
       <span *ngIf="message.sentAt">{{ message.sentAt | date:'EEEE, dd-MMM-YY HH:mm:ss':'UTC' }} UTC</span>
     </div>

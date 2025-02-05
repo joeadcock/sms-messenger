@@ -22,9 +22,9 @@ export class MessageService {
     this.http.get<IMessage[]>('/api/messages.json').subscribe({
       next: (messages) => {
         this.messagesSubject.next(messages.map((m) => {
-          const { message, phone } = m;
+          const { message, phone, status } = m;
 
-          return { message, phone, sentAt: convertDate(m["sentAt"]) }
+          return { message, phone, status, sentAt: convertDate(m["sentAt"]) }
         }))
       }
     })
