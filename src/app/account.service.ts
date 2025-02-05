@@ -18,7 +18,7 @@ export class AccountService {
   }
 
   login(credentials: ICredentials) {
-    localStorage.setItem("authToken",
+    localStorage.setItem('authToken',
                          btoa(`${credentials.email}:${credentials.password}`));
 
     // NOTE: this could be any authenticated endpoint
@@ -26,10 +26,10 @@ export class AccountService {
       next: () => {
         this.isSignedInSubject.next(true)
 
-        this.router.navigate(['/'])    
+        this.router.navigate(['/'])
       },
       error: () => {
-        this.isSignedInSubject.next(false)
+        localStorage.removeItem('authToken')
 
         window.location.reload()
       }
