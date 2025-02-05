@@ -9,6 +9,9 @@ servers:
 proxy:
   ssl: true
   host: sms-messenger.joeadcock.net
+  healthcheck:
+    path: /
+
 
 registry:
   server: registry.joeadcock.net:5043
