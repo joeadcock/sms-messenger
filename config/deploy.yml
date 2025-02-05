@@ -1,0 +1,26 @@
+service: sms-messenger
+
+image: joe/sms-messenger
+
+servers:
+  web:
+    - sms-messenger.joeadcock.net
+
+proxy:
+  ssl: true
+  host: sms-messenger.joeadcock.net
+
+registry:
+  server: registry.joeadcock.net:5043
+  username: joe
+
+  # Always use an access token rather than real password (pulled from .kamal/secrets).
+  password:
+    - KAMAL_REGISTRY_PASSWORD
+
+builder:
+  arch: arm64
+  remote: ssh://ubuntu@sms-messenger.joeadcock.net
+
+ssh:
+  user: ubuntu

@@ -1,0 +1,25 @@
+<header>New Message</header>
+<form (ngSubmit)="submit()">
+  <div class="mb-4 flex flex-col">
+    <label for="message[phone]">Phone</label>
+    <input
+      name="phone"
+      [(ngModel)]="message.phone"
+      id="message[phone]"
+      type="tel"
+    />
+  </div>
+
+  <div class="mb-4 flex flex-col">
+    <label for="message[message]">Message</label>
+    <textarea
+      name="message"
+      [(ngModel)]="message.message"
+      id="message[message]"
+    ></textarea>
+  </div>
+  <div class="actions flex justify-between">
+    <a (click)="clear()" class="underline">Clear</a>
+    <button class="btn" type="submit">Submit</button>
+  </div>
+</form>

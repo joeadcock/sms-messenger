@@ -1,0 +1,14 @@
+section.panel {
+  height: 80vh;
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  main {
+    flex-direction: column;
+  }
+
+  section.panel {
+    height: 50%;
+  }
+}

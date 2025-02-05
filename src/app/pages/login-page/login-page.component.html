@@ -1,0 +1,26 @@
+<main class="flex justify-center">
+  <section class="panel rounded-lg">
+    <header>Login</header>
+    <form (ngSubmit)="login()">
+      <div class="form-group mb-4">
+        <label for="user[email]">Email</label>
+        <input
+          name="email"
+          [(ngModel)]="credentials.email"
+          id="user[email]"
+          type="email">
+      </div>
+
+      <div class="form-group">
+        <label for="user[password]">Password</label>
+        <input
+          name="password"
+          [(ngModel)]="credentials.password"
+          id="user[password]"
+          type="password">
+      </div>
+
+      <button class="btn" type="submit">Login</button>
+    </form>
+  </section>
+</main>

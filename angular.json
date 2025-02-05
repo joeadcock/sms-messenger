@@ -8,7 +8,7 @@
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "sms",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -62,7 +62,8 @@
               "buildTarget": "sms-messenger:build:production"
             },
             "development": {
-              "buildTarget": "sms-messenger:build:development"
+              "buildTarget": "sms-messenger:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

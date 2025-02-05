@@ -1,0 +1,13 @@
+sms-message-list {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.message-list {
+  max-height: calc(100% - 32px);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  padding-right: 8px;
+}

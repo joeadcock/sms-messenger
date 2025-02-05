@@ -1,0 +1,8 @@
+{
+  "/api": {
+    "target": "https://sms-messenger-api.joeadcock.net/",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

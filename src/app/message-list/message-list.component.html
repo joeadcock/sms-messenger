@@ -1,0 +1,7 @@
+<header>Message History ({{ messages.length }})</header>
+
+<div class="message-list">
+  <sms-message-detail *ngFor="let message of messages"
+    [message]="message"
+  ></sms-message-detail>
+</div>
